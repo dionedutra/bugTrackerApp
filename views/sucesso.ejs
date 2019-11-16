@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>BugTrackter App</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="style.css">
+
+        <link rel="shortcut icon" href="https://cdn1.iconfinder.com/data/icons/social-object-set-2-1/74/27-512.png" type="image/x-icon">
+        
+        <style>
+            .msgsucesso{
+                text-align: center !important;
+                align-items: center !important;
+            }
+
+            .tituloApp{
+                font-size: 16px !important;
+                text-align: center !important;
+            }
+
+            .subtituloApp{
+                font-size: 12px !important;
+                text-align: center !important;
+            }
+            .navMargin{
+                margin-top: -30px;
+            }
+            .logoApp{
+                text-align: center;
+            }
+        </style>>
+        
+        <script>
+            document.onreadystatechange = () => {
+                if(document.readyState === 'interactive'){
+                    document.getElementById('userAgent').value = window.navigator.userAgent;
+                    document.getElementById('userDate').value = new Date();
+                }
+            }
+        </script>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-dark bg-dark navMargin">
+            <a class="navbar-brand logoApp" href="/">
+                BugTracker App
+            </a>
+        </nav>
+
+        <br /><br />
+            <h1 class="display-4 tituloApp">Ferramenta para reportar Bugs</h1>
+            <p class="lead subtituloApp">Preencha os dados da falha, erro crítico ou melhorias no formulário abaixo.</p>
+        <br /><br />  
+
+        <div class="alert alert-success" role="alert">
+            <span class="lead msgsucesso">Bug, falha ou melhoria reportados com sucesso!</span>
+        </div>
+
+    </body>
+</html>

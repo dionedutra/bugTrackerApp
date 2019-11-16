@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>BugTrackter App</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <link rel="shortcut icon" href="https://cdn1.iconfinder.com/data/icons/social-object-set-2-1/74/27-512.png" type="image/x-icon">
+
+        <script>
+            document.onreadystatechange = () => {
+                if(document.readyState === 'interactive'){
+                    document.getElementById('userAgent').value = window.navigator.userAgent;
+                    document.getElementById('userDate').value = new Date();
+                }
+            }
+        </script>
+
+            <style>
+            .msgsucesso{
+                text-align: center !important;
+                align-items: center !important;
+            }
+
+            .tituloApp{
+                font-size: 20px !important;
+                text-align: center !important;
+                font-kerning: 200;
+                font-weight: 800;
+            }
+
+            .subtituloApp{
+                font-size: 12px !important;
+                text-align: center !important;
+            }
+            .navMargin{
+                margin-top: -30px;
+            }
+            .logoApp{
+                text-align: center !important;
+                align-content: center !important;
+            }
+        </style>>
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-dark bg-dark navMargin">
+
+            <a class="navbar-brand logoApp" href="/">
+                BugTracker App
+            </a>
+
+        </nav>
+
+        <div class="container">
+            <br /><br />
+            <h1 class="display-4 tituloApp">Ferramenta para reportar Bugs</h1>
+            <p class="lead subtituloApp">Preencha os dados da falha, erro crítico ou melhorias no formulário abaixo.</p>
+            <br /><br />  
+            
+            <form method="post">
+
+                <div class="form-group">
+                    <label for="name">Nome:</label><br />
+                    <input type="text" id="name" class="form-control" name="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label><br />
+                    <input type="email" id="email" class="form-control" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="issue">Classificação:</label><br />
+                    <select id="issue" class="form-control" name="issue">
+                        <option value="">Selecione</option>
+                        <option value="BUG">Bug</option>
+                        <option value="CRITICAL">Crítico</option>
+                        <option value="MELHORIAS">Melhorias</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="reproduzir">Como reproduzir?</label><br />
+                    <input type="text" id="reproduzir" class="form-control" name="reproduzir">
+                </div>
+
+                <div class="form-group">
+                    <label for="esperada">A saiba esperada:</label><br />
+                    <input type="text" id="esperada" class="form-control" name="esperada">
+                </div>
+
+                <div class="form-group">
+                    <label for="recebida">Saida recebida:</label><br />
+                    <input type="text" id="recebida" class="form-control" name="recebida">
+                </div>
+
+                <div class="form-group">
+                    <input type="hidden" id="userAgent" name="userAgent">
+                    <input type="hidden" id="userDate" name="userDate">
+                </div>
+
+                <button class="btn btn-primary">Relatar Bug</button> 
+
+            </form>
+        </div><!--Fecha container-->
+    
+    </body>
+</html>
